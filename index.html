@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchCode Automobile Company</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to LaunchCode Automobile Company</h1>
+    </header>
+
+    <main>
+        <section id="feedback">
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Feedback</legend>
+                    
+                    <label for="name>">Name:</label>
+                    <input type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            size="100"
+                            placeholder="Enter your full name" />
+
+                    <label for="email">Email:</label>
+                    <input type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            size="100"
+                            placeholder="example@example.com"
+                            minlength="5" />
+
+                    <label for="password">Password:</label>
+                    <input type="password"
+                            id="password"
+                            name="password"
+                            required
+
+                            pattern=""
+                             
+                            title="Must contain at least one number, one uppercase letter, one lowercase letter, one special character, and at least 8 or more characters" 
+
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+-]).{8,}" 
+                            title="abc"  
+                           
+                            />
+
+                    <label for="feedbackcategory">Feedback Category:</label>
+                    <select id="feedbackcategory" 
+                            name="feedbackcategory">
+                        <option value="product">Product</option>
+                        <option value="service">Service</option>
+                        <option value="shipping">Shipping</option>    
+                    </select>
+
+                    <fieldset>
+                        <legend>Preferred Contact Method:</legend>
+                    
+                        <label for="email">
+                            <input type="radio" 
+                                id="email" 
+                                name="contact" 
+                                value="email"
+                                checked />
+                            Email    
+                        </label>
+
+                        <label for="phone">
+                            <input type="radio"
+                                id="phone"
+                                name="contact"
+                                value="phone" />
+                            Phone
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Features of Interest</legend>
+
+                        <label for="additionalcolors">
+                            <input type="checkbox"
+                                id="additionalcolors"
+                                name="features"
+                                value="additionalcolors"
+                                checked />
+                            Additional Colors
+                        </label>
+
+                        <label for="optionalwheels">
+                            <input type="checkbox"
+                                id="optionalwheels"
+                                name="features"
+                                value="additionalcolors" />
+                            Optional Wheels
+                        </label>
+                    </fieldset>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments"
+                        name="comments"
+                        rows="5"
+                        cols="30"
+                        placeholder="Write your message here"
+                        maxlength="200"></textarea>
+
+                    <input type="submit" value="Submit" />
+
+
+                </fieldset>
+
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
