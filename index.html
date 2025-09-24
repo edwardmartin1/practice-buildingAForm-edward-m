@@ -18,13 +18,15 @@
                 <fieldset>
                     <legend>Feedback</legend>
                     
-                    <label for="name>">Name:</label>
+                    <label for="name">Name:</label>
                     <input type="text" 
                             id="name" 
                             name="name" 
                             required 
                             size="100"
+                            maxlength="100"
                             placeholder="Enter your full name" />
+                    <br>    
 
                     <label for="email">Email:</label>
                     <input type="email" 
@@ -34,29 +36,29 @@
                             size="100"
                             placeholder="example@example.com"
                             minlength="5" />
+                    <br>
 
                     <label for="password">Password:</label>
                     <input type="password"
                             id="password"
                             name="password"
-                            required
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+]).{8,}" 
+                            title="Must contain at least one number, one uppercase letter, one lowercase letter, one special character, and at least 8 or more characters"   
+                            placeholder="Enter your password"
+                            minlength="8"
+                            required />
+                    <br>        
 
-                            pattern=""
-                             
-                            title="Must contain at least one number, one uppercase letter, one lowercase letter, one special character, and at least 8 or more characters" 
-
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+-]).{8,}" 
-                            title="abc"  
-                           
-                            />
-
-                    <label for="feedbackcategory">Feedback Category:</label>
-                    <select id="feedbackcategory" 
-                            name="feedbackcategory">
+                    <label for="feedbackCategory">Feedback Category:</label>
+                    <select id="feedbackCategory" 
+                            name="feedbackCategory"
+                            required>
+                        <option value="" selected>Please select...</option>    
                         <option value="product">Product</option>
                         <option value="service">Service</option>
                         <option value="shipping">Shipping</option>    
                     </select>
+                    <br>
 
                     <fieldset>
                         <legend>Preferred Contact Method:</legend>
@@ -78,27 +80,29 @@
                             Phone
                         </label>
                     </fieldset>
+                    <br>
 
                     <fieldset>
                         <legend>Additional Features of Interest</legend>
 
-                        <label for="additionalcolors">
+                        <label for="additionalColors">
                             <input type="checkbox"
-                                id="additionalcolors"
+                                id="additionalColors"
                                 name="features"
-                                value="additionalcolors"
+                                value="additionalColors"
                                 checked />
                             Additional Colors
                         </label>
 
-                        <label for="optionalwheels">
+                        <label for="optionalWheels">
                             <input type="checkbox"
-                                id="optionalwheels"
+                                id="optionalWheels"
                                 name="features"
-                                value="additionalcolors" />
+                                value="optionalWheels" />
                             Optional Wheels
                         </label>
                     </fieldset>
+                    <br>
 
                     <label for="comments">Comments:</label>
                     <textarea id="comments"
@@ -106,24 +110,19 @@
                         rows="5"
                         cols="30"
                         placeholder="Write your message here"
-                        maxlength="200"></textarea>
+                        maxlength="200"
+                        required></textarea>
+                    <br>
 
                     <input type="submit" value="Submit" />
-
-
                 </fieldset>
-
-
             </form>
-
-
         </section>
-
     </main>
 
-    <footer>
-
-    </footer>
 </body>
 
 </html>
+
+
+
